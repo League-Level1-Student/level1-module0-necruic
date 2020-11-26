@@ -70,7 +70,7 @@ public class BodyPartQuiz {
 		}
 		// 7. Use the showNextImage() method below to get the next image
 		showNextImage();
-		
+		guess = JOptionPane.showInputDialog("who is this?");
 		// 8. .... repeat 4-7 for all your images.....
 		if(guess.equalsIgnoreCase("leonardo")) {
 			JOptionPane.showMessageDialog(null, "you guessed correctly, score+1");
@@ -80,16 +80,25 @@ public class BodyPartQuiz {
 			JOptionPane.showMessageDialog(null, "you guessed wrong, it was leonardo");
 		}
 		showNextImage();
-		if(guess.equalsIgnoreCase("jack")) {
+		guess = JOptionPane.showInputDialog("who is this?");
+		if(guess.equalsIgnoreCase("morgan")) {
 			JOptionPane.showMessageDialog(null, "you guessed correctly, score+1");
 			score=score+1;
 		}
 		else {
-			JOptionPane.showMessageDialog(null, "you guessed wrong, it was jack");
+			JOptionPane.showMessageDialog(null, "you guessed wrong, it was morgan");
 		}
 		showNextImage();
+		guess = JOptionPane.showInputDialog("who is this?");
+		if(guess.equalsIgnoreCase("jack")) {
+			JOptionPane.showMessageDialog(null, "you guessed correctly, score+1");
+		score=score+1;
+		}
+		else {
+			JOptionPane.showMessageDialog(null, "you guessed wrong, it was jack");
+		}
 		// 9. Show them their current score
-
+		JOptionPane.showMessageDialog(null, "your score is" + score);
 	}
 
 	public void showNextImage() {
